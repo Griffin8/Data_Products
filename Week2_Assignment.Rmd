@@ -1,0 +1,27 @@
+---
+title: "Monarch Butterfly Population in California, 2015"
+author: "Danielle"
+date: "January 7, 2017"
+output:
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(leaflet)
+df <- data.frame(county = c("Alameda","Marin","Monterey","San Luis Obispo","Santa Barbara","Santa Cruz"),
+                 count = c(18743,38450,26694,112018,51398,27600),
+                 lat = c(37.7652,38.0834,36.6002,35.2828,34.4208,36.9741),
+                 lng = c(-122.2416,-122.7633,-121.8947,-120.6596,-119.6982,-122.0308)
+                )
+butterflyIcon <- makeIcon(iconUrl = "C:/Coursera/Data Products/Monarch.gif", iconWidth = 31, iconHeight = 31, iconAnchorX = 31/2, iconAnchorY = 16)
+
+df %>%
+  leaflet() %>%
+  addTiles() %>%
+  addCircles(lat = ~lat, lng = ~lng, weight = 1, radius = df$count) %>%
+  addMarkers(lat = ~lat, lng = ~lng, icon = butterflyIcon, popup = paste(df$county,": ", format(df$count, big.mark=",")))
+```
