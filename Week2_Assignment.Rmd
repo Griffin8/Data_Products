@@ -1,7 +1,6 @@
 ---
 title: "Monarch Butterfly Population in California, 2015"
 author: "Danielle"
-date: "January 7, 2017"
 output:
   html_document: default
 ---
@@ -9,7 +8,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
+##January 7, 2017
 ```{r}
 library(leaflet)
 df <- data.frame(county = c("Alameda","Marin","Monterey","San Luis Obispo","Santa Barbara","Santa Cruz"),
