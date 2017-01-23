@@ -8,7 +8,7 @@ Stock Forecast Tool for Google and Yahoo
 ========================================================
 This application is a simple tool for forecasting stock price. Currently it only has google and yahoo stocks.
 
-The forecast is based on the historical data from January 6, 2015 to January20, 2017. In the UI, there are radio button for selecting #a stock and a slider for selecting how many days to forecast. The graph will display forecast data based on your selections.
+The forecast is based on the historical data from January 6, 2015 to January20, 2017. In the UI, there are radio button for selecting a stock and a slider for selecting how many days to forecast. The graph will display forecast data based on your selections.
 
 Prepare Stock Data
 ========================================================
